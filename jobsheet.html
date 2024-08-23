@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Jobsheet</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="form-container">
+      <h2>Form Jobsheet</h2>
+      <form id="jobsheet-form" autocomplete="off">
+
+        <!-- Input Nama Perusahaan -->
+        <label for="company-name">Nama Perusahaan:</label>
+        <input
+          type="text"
+          id="company-name"
+          name="companyName"
+          placeholder="Masukkan Nama Perusahaan"
+          autocomplete="off"
+          required
+        />
+
+        <!-- Input Nama Marketing -->
+        <label for="marketing-name">Nama Marketing:</label>
+        <input
+          type="text"
+          id="marketing-name"
+          name="marketingName"
+          placeholder="Masukkan Nama Marketing"
+          autocomplete="off"
+          required
+        />
+        <label for="waste-name">Nama Limbah:</label>
+        <div style="position: relative">
+          <input
+            type="text"
+            id="waste-name"
+            name="wasteName"
+            placeholder="Masukkan Nama Limbah"
+            autocomplete="off"
+            required
+          />
+          <div id="suggestions" class="suggestions" style="display: none"></div>
+        </div>
+
+        <label for="unit">Satuan:</label>
+        <select id="unit" name="unit" required>
+          <option value="" disabled selected>Pilih Satuan</option>
+          <option value="Kg">Kg</option>
+          <option value="Liter">Liter</option>
+        </select>
+
+        <label for="quantity">Jumlah:</label>
+        <input
+          type="number"
+          id="quantity"
+          name="quantity"
+          placeholder="Masukan Jumlah Limbah"
+          autocomplete="off"
+        />
+
+        <label for="unit-price">Harga Satuan:</label>
+        <input
+          type="number"
+          id="unit-price"
+          name="unitPrice"
+          autocomplete="off"
+        />
+
+        <label for="total-client-price">Total Harga Klien:</label>
+        <input
+          type="text"
+          id="total-client-price"
+          name="totalClientPrice"
+          readonly
+        />
+
+        <label for="cost">Biaya:</label>
+        <input
+          type="number"
+          id="cost"
+          name="cost"
+          autocomplete="off"
+          required
+        />
+
+        <label for="total-cost">Total Biaya:</label>
+        <input type="text" id="total-cost" name="totalCost" readonly />
+
+        <label for="Armada">Pengolahan & Armada:</label>
+        <input
+          type="text"
+          id="Armada"
+          name="Armada"
+          autocomplete="off"
+          required
+        />
+
+        <label for="profit-estimation">Estimasi Profit:</label>
+        <input
+          type="text"
+          id="profit-estimation"
+          name="profitEstimation"
+          readonly
+        />
+
+        <label for="gpm">GPM (Gross Profit Margin):</label>
+        <input type="text" id="gpm" name="gpm" readonly />
+
+        <button type="submit">Submit</button>
+        <a href="results.html" id="view-results-link">Lihat Hasil</a>
+      </form>
+      <div id="success-message" style="display: none">
+        Data berhasil disubmit!
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
